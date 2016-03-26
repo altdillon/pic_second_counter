@@ -1,0 +1,369 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+cinit CODE 0 13 13 1D 2
+text1 CODE 0 7C 7C 10 2
+text2 CODE 0 30 30 2B 2
+idataCOMMON CODE 0 96 96 1 2
+maintext CODE 0 5B 5B 11 2
+cstackCOMMON COMMON 1 77 77 6 1
+inittext CODE 0 6C 6C 10 2
+intentry CODE 0 4 4 D 2
+bssBANK0 BANK0 1 2A 2A 4 1
+idataBANK0 CODE 0 8C 8C A 2
+dataBANK0 BANK0 1 20 20 A 1
+dataCOMMON COMMON 1 7D 7D 1 1
+bssCOMMON COMMON 1 70 70 7 1
+$/tmp/xcXtVsgvf.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 11 11 2 2
+config CONFIG 0 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 2E-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 2E-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 2-3 2
+CONST 97-FFF 2
+ENTRY 2-3 2
+ENTRY 97-FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 2-3 2
+CODE 97-FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 2-3 2
+STRCODE 97-FFF 2
+STRING 2-3 2
+STRING 97-FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+13 cinit CODE >445:/tmp/xcXtgU3QC
+13 cinit CODE >448:/tmp/xcXtgU3QC
+13 cinit CODE >493:/tmp/xcXtgU3QC
+14 cinit CODE >494:/tmp/xcXtgU3QC
+15 cinit CODE >495:/tmp/xcXtgU3QC
+16 cinit CODE >496:/tmp/xcXtgU3QC
+17 cinit CODE >497:/tmp/xcXtgU3QC
+18 cinit CODE >498:/tmp/xcXtgU3QC
+19 cinit CODE >499:/tmp/xcXtgU3QC
+1A cinit CODE >502:/tmp/xcXtgU3QC
+1B cinit CODE >503:/tmp/xcXtgU3QC
+1C cinit CODE >504:/tmp/xcXtgU3QC
+1D cinit CODE >505:/tmp/xcXtgU3QC
+1E cinit CODE >537:/tmp/xcXtgU3QC
+1F cinit CODE >538:/tmp/xcXtgU3QC
+20 cinit CODE >539:/tmp/xcXtgU3QC
+21 cinit CODE >540:/tmp/xcXtgU3QC
+22 cinit CODE >541:/tmp/xcXtgU3QC
+23 cinit CODE >542:/tmp/xcXtgU3QC
+24 cinit CODE >543:/tmp/xcXtgU3QC
+25 cinit CODE >544:/tmp/xcXtgU3QC
+26 cinit CODE >545:/tmp/xcXtgU3QC
+27 cinit CODE >546:/tmp/xcXtgU3QC
+2A cinit CODE >550:/tmp/xcXtgU3QC
+2C cinit CODE >551:/tmp/xcXtgU3QC
+2D cinit CODE >557:/tmp/xcXtgU3QC
+2D cinit CODE >559:/tmp/xcXtgU3QC
+2E cinit CODE >560:/tmp/xcXtgU3QC
+4 intentry CODE >47:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+30 text2 CODE >47:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+30 text2 CODE >49:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+31 text2 CODE >53:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+40 text2 CODE >55:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+42 text2 CODE >57:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+43 text2 CODE >58:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+44 text2 CODE >59:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+44 text2 CODE >61:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+45 text2 CODE >64:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+47 text2 CODE >65:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+48 text2 CODE >68:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+4E text2 CODE >71:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+4F text2 CODE >73:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+50 text2 CODE >75:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+7C text1 CODE >11:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+7C text1 CODE >13:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+80 text1 CODE >14:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+81 text1 CODE >15:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+82 text1 CODE >16:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+84 text1 CODE >18:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+85 text1 CODE >19:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+86 text1 CODE >20:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+87 text1 CODE >22:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+89 text1 CODE >23:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+8B text1 CODE >24:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/setuppic.c
+5B maintext CODE >78:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+5B maintext CODE >80:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+5E maintext CODE >81:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+60 maintext CODE >103:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+64 maintext CODE >105:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+6A maintext CODE >115:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+6B maintext CODE >87:/home/dillon/MPLABXProjects/bikeSpeedoMeterC_version.X/main.c
+6C inittext CODE >511:/tmp/xcXtgU3QC
+6C inittext CODE >512:/tmp/xcXtgU3QC
+6D inittext CODE >513:/tmp/xcXtgU3QC
+6E inittext CODE >514:/tmp/xcXtgU3QC
+6F inittext CODE >515:/tmp/xcXtgU3QC
+70 inittext CODE >522:/tmp/xcXtgU3QC
+70 inittext CODE >523:/tmp/xcXtgU3QC
+72 inittext CODE >524:/tmp/xcXtgU3QC
+73 inittext CODE >525:/tmp/xcXtgU3QC
+74 inittext CODE >526:/tmp/xcXtgU3QC
+75 inittext CODE >527:/tmp/xcXtgU3QC
+76 inittext CODE >528:/tmp/xcXtgU3QC
+77 inittext CODE >529:/tmp/xcXtgU3QC
+78 inittext CODE >530:/tmp/xcXtgU3QC
+79 inittext CODE >531:/tmp/xcXtgU3QC
+7A inittext CODE >532:/tmp/xcXtgU3QC
+7B inittext CODE >533:/tmp/xcXtgU3QC
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 1 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 2009 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+ltemp0 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ltemp1 82 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ltemp2 86 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ltemp3 80 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack /tmp/xcXtVsgvf.obj
+_main B6 0 CODE 0 maintext dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+btemp 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ltemp 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+start 22 0 CODE 0 init /tmp/xcXtVsgvf.obj
+ttemp 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+_system_init F8 0 CODE 0 text1 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+ttemp0 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ttemp1 81 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ttemp2 84 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ttemp3 87 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+ttemp4 7F 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+intlevel0 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXtVsgvf.obj
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+wtemp0 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp1 80 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp2 82 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp3 84 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp4 86 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp5 88 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+wtemp6 7F 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__pidataCOMMON 12C 0 CODE 0 idataCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__size_of_bres_count_int 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+__Lmaintext 0 0 ABS 0 maintext -
+_INTCON B 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_OPTION_REG 81 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+start_initialization 26 0 CODE 0 cinit dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_OSCCON 8F 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_TRISAbits 85 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_lookup_table 20 0 BANK0 1 dataBANK0 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pcstackBANK0 0 0 BANK0 1 cstackBANK0 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXtVsgvf.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 60 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit 26 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+_PORTAbits 5 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_PORTBbits 6 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_INTCONbits B 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 22 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 22 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 2009 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__end_of_system_init 118 0 CODE 0 text1 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+saved_w 7E 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_b_count 70 0 COMMON 1 bssCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXtVsgvf.obj
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pmaintext B6 0 CODE 0 maintext dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hinittext 0 0 ABS 0 inittext -
+_bres_count_int 60 0 CODE 0 text2 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_tuning 76 0 COMMON 1 bssCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+stackhi 0 0 ABS 0 - /tmp/xcXtVsgvf.obj
+stacklo 0 0 ABS 0 - /tmp/xcXtVsgvf.obj
+_wheel_count 74 0 COMMON 1 bssCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+init_fetch0 D8 0 CODE 0 inittext dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 22 0 CODE 0 end_init -
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__CFG_FOSC$INTOSCCLK 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+end_of_initialization 5A 0 CODE 0 cinit dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hintentry 22 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__end_of_bres_count_int B6 0 CODE 0 text2 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_system_init 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__ptext1 F8 0 CODE 0 text1 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__ptext2 60 0 CODE 0 text2 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 5A 0 CODE 0 cinit dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__pidataBANK0 118 0 CODE 0 idataBANK0 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+__CFG_PWRTE$ON 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pcstackCOMMON 77 0 COMMON 1 cstackCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hend_init 26 0 CODE 0 end_init -
+init_ram0 E0 0 CODE 0 inittext dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__end_of_main D8 0 CODE 0 maintext dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_ANSEL 9B 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__CFG_CCPMX$RB0 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__initialization 26 0 CODE 0 cinit dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pbssBANK0 2A 0 BANK0 1 bssBANK0 dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/bikeSpeedoMeterC_version.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+intentry 0 4 8 93 2
+reset_vec 0 0 0 2 2
+dataBANK0 1 20 20 E 1
+bssCOMMON 1 70 70 E 1
+config 0 2007 400E 2 2

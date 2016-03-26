@@ -1,0 +1,912 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.37 build -260352376 
+                                                                                               Wed Mar 23 21:10:36 2016
+
+Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
+     1                           	processor	16F88
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataCOMMON,global,class=CODE,delta=2
+     5                           	psect	idataBANK0,global,class=CODE,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	inittext,global,class=CODE,delta=2
+    12                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    13                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    14                           	psect	maintext,global,class=CODE,split=1,delta=2
+    15                           	psect	text1,local,class=CODE,merge=1,delta=2
+    16                           	psect	text2,local,class=CODE,merge=1,delta=2
+    17                           	psect	text3,local,class=CODE,merge=1,delta=2
+    18                           	psect	intentry,global,class=CODE,delta=2
+    19                           	dabs	1,0x7E,2
+    20  0000                     	;# 
+    21  0001                     	;# 
+    22  0002                     	;# 
+    23  0003                     	;# 
+    24  0004                     	;# 
+    25  0005                     	;# 
+    26  0006                     	;# 
+    27  000A                     	;# 
+    28  000B                     	;# 
+    29  000C                     	;# 
+    30  000D                     	;# 
+    31  000E                     	;# 
+    32  000E                     	;# 
+    33  000F                     	;# 
+    34  0010                     	;# 
+    35  0011                     	;# 
+    36  0012                     	;# 
+    37  0013                     	;# 
+    38  0014                     	;# 
+    39  0015                     	;# 
+    40  0015                     	;# 
+    41  0016                     	;# 
+    42  0017                     	;# 
+    43  0018                     	;# 
+    44  0019                     	;# 
+    45  001A                     	;# 
+    46  001E                     	;# 
+    47  001F                     	;# 
+    48  0081                     	;# 
+    49  0085                     	;# 
+    50  0086                     	;# 
+    51  008C                     	;# 
+    52  008D                     	;# 
+    53  008E                     	;# 
+    54  008F                     	;# 
+    55  0090                     	;# 
+    56  0092                     	;# 
+    57  0093                     	;# 
+    58  0094                     	;# 
+    59  0098                     	;# 
+    60  0099                     	;# 
+    61  009B                     	;# 
+    62  009C                     	;# 
+    63  009D                     	;# 
+    64  009E                     	;# 
+    65  009F                     	;# 
+    66  0105                     	;# 
+    67  010C                     	;# 
+    68  010D                     	;# 
+    69  010E                     	;# 
+    70  010F                     	;# 
+    71  018C                     	;# 
+    72  018D                     	;# 
+    73  0000                     	;# 
+    74  0001                     	;# 
+    75  0002                     	;# 
+    76  0003                     	;# 
+    77  0004                     	;# 
+    78  0005                     	;# 
+    79  0006                     	;# 
+    80  000A                     	;# 
+    81  000B                     	;# 
+    82  000C                     	;# 
+    83  000D                     	;# 
+    84  000E                     	;# 
+    85  000E                     	;# 
+    86  000F                     	;# 
+    87  0010                     	;# 
+    88  0011                     	;# 
+    89  0012                     	;# 
+    90  0013                     	;# 
+    91  0014                     	;# 
+    92  0015                     	;# 
+    93  0015                     	;# 
+    94  0016                     	;# 
+    95  0017                     	;# 
+    96  0018                     	;# 
+    97  0019                     	;# 
+    98  001A                     	;# 
+    99  001E                     	;# 
+   100  001F                     	;# 
+   101  0081                     	;# 
+   102  0085                     	;# 
+   103  0086                     	;# 
+   104  008C                     	;# 
+   105  008D                     	;# 
+   106  008E                     	;# 
+   107  008F                     	;# 
+   108  0090                     	;# 
+   109  0092                     	;# 
+   110  0093                     	;# 
+   111  0094                     	;# 
+   112  0098                     	;# 
+   113  0099                     	;# 
+   114  009B                     	;# 
+   115  009C                     	;# 
+   116  009D                     	;# 
+   117  009E                     	;# 
+   118  009F                     	;# 
+   119  0105                     	;# 
+   120  010C                     	;# 
+   121  010D                     	;# 
+   122  010E                     	;# 
+   123  010F                     	;# 
+   124  018C                     	;# 
+   125  018D                     	;# 
+   126  0000                     	;# 
+   127  0001                     	;# 
+   128  0002                     	;# 
+   129  0003                     	;# 
+   130  0004                     	;# 
+   131  0005                     	;# 
+   132  0006                     	;# 
+   133  000A                     	;# 
+   134  000B                     	;# 
+   135  000C                     	;# 
+   136  000D                     	;# 
+   137  000E                     	;# 
+   138  000E                     	;# 
+   139  000F                     	;# 
+   140  0010                     	;# 
+   141  0011                     	;# 
+   142  0012                     	;# 
+   143  0013                     	;# 
+   144  0014                     	;# 
+   145  0015                     	;# 
+   146  0015                     	;# 
+   147  0016                     	;# 
+   148  0017                     	;# 
+   149  0018                     	;# 
+   150  0019                     	;# 
+   151  001A                     	;# 
+   152  001E                     	;# 
+   153  001F                     	;# 
+   154  0081                     	;# 
+   155  0085                     	;# 
+   156  0086                     	;# 
+   157  008C                     	;# 
+   158  008D                     	;# 
+   159  008E                     	;# 
+   160  008F                     	;# 
+   161  0090                     	;# 
+   162  0092                     	;# 
+   163  0093                     	;# 
+   164  0094                     	;# 
+   165  0098                     	;# 
+   166  0099                     	;# 
+   167  009B                     	;# 
+   168  009C                     	;# 
+   169  009D                     	;# 
+   170  009E                     	;# 
+   171  009F                     	;# 
+   172  0105                     	;# 
+   173  010C                     	;# 
+   174  010D                     	;# 
+   175  010E                     	;# 
+   176  010F                     	;# 
+   177  018C                     	;# 
+   178  018D                     	;# 
+   179                           
+   180                           	psect	idataCOMMON
+   181  00B4                     __pidataCOMMON:	
+   182                           
+   183                           ;initializer for _descimal_point
+   184  00B4  3403               	retlw	3
+   185                           
+   186                           	psect	idataBANK0
+   187  00AA                     __pidataBANK0:	
+   188                           
+   189                           ;initializer for _lookup_table
+   190  00AA  343F               	retlw	63
+   191  00AB  340B               	retlw	11
+   192  00AC  345B               	retlw	91
+   193  00AD  344F               	retlw	79
+   194  00AE  3466               	retlw	102
+   195  00AF  346D               	retlw	109
+   196  00B0  347D               	retlw	125
+   197  00B1  3407               	retlw	7
+   198  00B2  347F               	retlw	127
+   199  00B3  346F               	retlw	111
+   200  000B                     _INTCON	set	11
+   201  000B                     _INTCONbits	set	11
+   202  0005                     _PORTAbits	set	5
+   203  0006                     _PORTB	set	6
+   204  0006                     _PORTBbits	set	6
+   205  009B                     _ANSEL	set	155
+   206  0081                     _OPTION_REG	set	129
+   207  008F                     _OSCCON	set	143
+   208  0085                     _TRISA	set	133
+   209  0085                     _TRISAbits	set	133
+   210  0086                     _TRISB	set	134
+   211                           
+   212                           ; #config settings
+   213  0000                     
+   214                           	psect	cinit
+   215  0013                     start_initialization:	
+   216  0013                     __initialization:	
+   217                           
+   218                           ; Clear objects allocated to COMMON
+   219  0013  01F6               	clrf	__pbssCOMMON& (0+127)
+   220  0014  01F7               	clrf	(__pbssCOMMON+1)& (0+127)
+   221  0015  01F8               	clrf	(__pbssCOMMON+2)& (0+127)
+   222  0016  01F9               	clrf	(__pbssCOMMON+3)& (0+127)
+   223  0017  01FA               	clrf	(__pbssCOMMON+4)& (0+127)
+   224                           
+   225                           ; Clear objects allocated to BANK0
+   226  0018  01AA               	clrf	__pbssBANK0& (0+127)
+   227  0019  01AB               	clrf	(__pbssBANK0+1)& (0+127)
+   228  001A  01AC               	clrf	(__pbssBANK0+2)& (0+127)
+   229  001B  01AD               	clrf	(__pbssBANK0+3)& (0+127)
+   230  001C  01AE               	clrf	(__pbssBANK0+4)& (0+127)
+   231  001D  01AF               	clrf	(__pbssBANK0+5)& (0+127)
+   232                           
+   233                           ; Initialize objects allocated to BANK0
+   234  001E  1383               	bcf	3,7	;select IRP bank0
+   235  001F  302A               	movlw	low (__pdataBANK0+10)
+   236  0020  00FD               	movwf	btemp+-1
+   237  0021  3000               	movlw	high __pidataBANK0
+   238  0022  00FE               	movwf	btemp
+   239  0023  30AA               	movlw	low __pidataBANK0
+   240  0024  00FF               	movwf	btemp+1
+   241  0025  3020               	movlw	low __pdataBANK0
+   242  0026  0084               	movwf	4
+   243  0027  118A  207F  118A   	fcall	init_ram0
+   244                           
+   245                           ; Initialize objects allocated to COMMON
+   246  002A  118A  20B4         	fcall	__pidataCOMMON	;fetch initializer
+   247  002C  00FB               	movwf	__pdataCOMMON& (0+127)
+   248  002D                     end_of_initialization:	
+   249                           ;End of C runtime variable initialization code
+   250                           
+   251  002D                     __end_of__initialization:	
+   252  002D  0183               	clrf	3
+   253  002E  118A  285B         	ljmp	_main	;jump to C main() function
+   254                           
+   255                           	psect	bssCOMMON
+   256  0076                     __pbssCOMMON:	
+   257  0076                     _b_count:	
+   258  0076                     	ds	2
+   259  0078                     _one:	
+   260  0078                     	ds	2
+   261  007A                     _tuning:	
+   262  007A                     	ds	1
+   263                           
+   264                           	psect	dataCOMMON
+   265  007B                     __pdataCOMMON:	
+   266  007B                     _descimal_point:	
+   267  007B                     	ds	1
+   268                           
+   269                           	psect	bssBANK0
+   270  002A                     __pbssBANK0:	
+   271  002A                     _three:	
+   272  002A                     	ds	2
+   273  002C                     _two:	
+   274  002C                     	ds	2
+   275  002E                     _wheel_count:	
+   276  002E                     	ds	2
+   277                           
+   278                           	psect	dataBANK0
+   279  0020                     __pdataBANK0:	
+   280  0020                     _lookup_table:	
+   281  0020                     	ds	10
+   282                           
+   283                           	psect	inittext
+   284  007B                     init_fetch0:	
+   285                           ;	Called with low address in FSR and high address in W
+   286                           
+   287  007B  087E               	movf	126,w
+   288  007C  008A               	movwf	10
+   289  007D  087F               	movf	127,w
+   290  007E  0082               	movwf	2
+   291  007F                     init_ram0:	
+   292                           ;Called with:
+   293                           ;	high address of idata address in btemp 
+   294                           ;	low address of idata address in btemp+1 
+   295                           ;	low address of data in FSR
+   296                           ;	high address + 1 of data in btemp-1
+   297                           
+   298  007F  207B  118A         	fcall	init_fetch0
+   299  0081  0080               	movwf	0
+   300  0082  0A84               	incf	4,f
+   301  0083  0804               	movf	4,w
+   302  0084  067D               	xorwf	125,w
+   303  0085  1903               	btfsc	3,2
+   304  0086  3400               	retlw	0
+   305  0087  0AFF               	incf	127,f
+   306  0088  1903               	btfsc	3,2
+   307  0089  0AFE               	incf	126,f
+   308  008A  287F               	goto	init_ram0
+   309                           
+   310                           	psect	cstackCOMMON
+   311  0070                     __pcstackCOMMON:	
+   312  0070                     ?_system_init:	
+   313  0070                     ?_getSevenSegmentNode:	
+   314                           ; 1 bytes @ 0x0
+   315                           
+   316  0070                     ?_bres_count_int:	
+   317                           ; 1 bytes @ 0x0
+   318                           
+   319  0070                     ??_bres_count_int:	
+   320                           ; 1 bytes @ 0x0
+   321                           
+   322  0070                     ?_main:	
+   323                           ; 1 bytes @ 0x0
+   324                           
+   325                           
+   326                           ; 1 bytes @ 0x0
+   327  0070                     	ds	6
+   328                           
+   329                           	psect	cstackBANK0
+   330  0030                     __pcstackBANK0:	
+   331  0030                     ??_system_init:	
+   332  0030                     ??_getSevenSegmentNode:	
+   333                           ; 1 bytes @ 0x0
+   334                           
+   335  0030                     getSevenSegmentNode@bcd:	
+   336                           ; 1 bytes @ 0x0
+   337                           
+   338                           
+   339                           ; 1 bytes @ 0x0
+   340  0030                     	ds	1
+   341  0031                     ??_main:	
+   342                           
+   343                           ; 1 bytes @ 0x1
+   344  0031                     	ds	1
+   345  0032                     main@value:	
+   346                           
+   347                           ; 1 bytes @ 0x2
+   348  0032                     	ds	1
+   349                           
+   350                           	psect	maintext
+   351  005B                     __pmaintext:	
+   352 ;;
+   353 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   354 ;;
+   355 ;; *************** function _main *****************
+   356 ;; Defined at:
+   357 ;;		line 78 in file "main.c"
+   358 ;; Parameters:    Size  Location     Type
+   359 ;;		None
+   360 ;; Auto vars:     Size  Location     Type
+   361 ;;  value           1    2[BANK0 ] unsigned char 
+   362 ;; Return value:  Size  Location     Type
+   363 ;;                  1    wreg      void 
+   364 ;; Registers used:
+   365 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   366 ;; Tracked objects:
+   367 ;;		On entry : B00/0
+   368 ;;		On exit  : 0/0
+   369 ;;		Unchanged: 0/0
+   370 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   371 ;;      Params:         0       0       0       0       0
+   372 ;;      Locals:         0       1       0       0       0
+   373 ;;      Temps:          0       1       0       0       0
+   374 ;;      Totals:         0       2       0       0       0
+   375 ;;Total ram usage:        2 bytes
+   376 ;; Hardware stack levels required when called:    2
+   377 ;; This function calls:
+   378 ;;		_getSevenSegmentNode
+   379 ;;		_system_init
+   380 ;; This function is called by:
+   381 ;;		Startup code after reset
+   382 ;; This function uses a non-reentrant model
+   383 ;;
+   384                           
+   385                           
+   386                           ;psect for function _main
+   387  005B                     _main:	
+   388                           
+   389                           ;main.c: 80: system_init();
+   390                           
+   391                           ;incstack = 0
+   392                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   393  005B  118A  208B  118A   	fcall	_system_init
+   394                           
+   395                           ;main.c: 81: wheel_count=0;
+   396  005E  1283               	bcf	3,5	;RP0=0, select bank0
+   397  005F  1303               	bcf	3,6	;RP1=0, select bank0
+   398  0060  01AE               	clrf	_wheel_count
+   399  0061  01AF               	clrf	_wheel_count+1
+   400  0062                     l738:	
+   401                           ;main.c: 87: while(1)
+   402                           
+   403                           
+   404                           ;main.c: 88: {
+   405                           ;main.c: 103: if(PORTBbits.RB6==1)
+   406  0062  1F06               	btfss	6,6	;volatile
+   407  0063  286A               	goto	l38
+   408                           
+   409                           ;main.c: 104: {
+   410                           ;main.c: 105: wheel_count++;
+   411  0064  3001               	movlw	1
+   412  0065  07AE               	addwf	_wheel_count,f
+   413  0066  1803               	skipnc
+   414  0067  0AAF               	incf	_wheel_count+1,f
+   415  0068  3000               	movlw	0
+   416  0069  07AF               	addwf	_wheel_count+1,f
+   417  006A                     l38:	
+   418                           
+   419                           ;main.c: 106: }
+   420                           ;main.c: 111: char value=0x08;
+   421  006A  3008               	movlw	8
+   422  006B  00B1               	movwf	??_main
+   423  006C  0831               	movf	??_main,w
+   424  006D  00B2               	movwf	main@value
+   425                           
+   426                           ;main.c: 112: value=getSevenSegmentNode(value);
+   427  006E  0832               	movf	main@value,w
+   428  006F  118A  209B  118A   	fcall	_getSevenSegmentNode
+   429  0072  1283               	bcf	3,5	;RP0=0, select bank0
+   430  0073  1303               	bcf	3,6	;RP1=0, select bank0
+   431  0074  00B1               	movwf	??_main
+   432  0075  0831               	movf	??_main,w
+   433  0076  00B2               	movwf	main@value
+   434                           
+   435                           ;main.c: 113: PORTB=value;
+   436  0077  0832               	movf	main@value,w
+   437  0078  0086               	movwf	6	;volatile
+   438                           
+   439                           ;main.c: 114: PORTAbits.RA7=1;
+   440  0079  1785               	bsf	5,7	;volatile
+   441  007A  2862               	goto	l738
+   442  007B                     __end_of_main:	
+   443                           ;main.c: 116: }
+   444                           ;main.c: 118: return;
+   445                           
+   446                           
+   447                           	psect	text1
+   448  008B                     __ptext1:	
+   449 ;; *************** function _system_init *****************
+   450 ;; Defined at:
+   451 ;;		line 11 in file "setuppic.c"
+   452 ;; Parameters:    Size  Location     Type
+   453 ;;		None
+   454 ;; Auto vars:     Size  Location     Type
+   455 ;;		None
+   456 ;; Return value:  Size  Location     Type
+   457 ;;                  1    wreg      void 
+   458 ;; Registers used:
+   459 ;;		wreg, status,2
+   460 ;; Tracked objects:
+   461 ;;		On entry : 0/0
+   462 ;;		On exit  : 0/0
+   463 ;;		Unchanged: 0/0
+   464 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   465 ;;      Params:         0       0       0       0       0
+   466 ;;      Locals:         0       0       0       0       0
+   467 ;;      Temps:          0       0       0       0       0
+   468 ;;      Totals:         0       0       0       0       0
+   469 ;;Total ram usage:        0 bytes
+   470 ;; Hardware stack levels used:    1
+   471 ;; Hardware stack levels required when called:    1
+   472 ;; This function calls:
+   473 ;;		Nothing
+   474 ;; This function is called by:
+   475 ;;		_main
+   476 ;; This function uses a non-reentrant model
+   477 ;;
+   478                           
+   479                           
+   480                           ;psect for function _system_init
+   481  008B                     _system_init:	
+   482                           
+   483                           ;setuppic.c: 13: OSCCON=0b01101100;
+   484                           
+   485                           ;incstack = 0
+   486                           ; Regs used in _system_init: [wreg+status,2]
+   487  008B  306C               	movlw	108
+   488  008C  1683               	bsf	3,5	;RP0=1, select bank1
+   489  008D  1303               	bcf	3,6	;RP1=0, select bank1
+   490  008E  008F               	movwf	15	;volatile
+   491                           
+   492                           ;setuppic.c: 14: ANSEL=0x00;
+   493  008F  019B               	clrf	27	;volatile
+   494                           
+   495                           ;setuppic.c: 15: TRISB=0x00;
+   496  0090  0186               	clrf	6	;volatile
+   497                           
+   498                           ;setuppic.c: 16: TRISA=0xff;
+   499  0091  30FF               	movlw	255
+   500  0092  0085               	movwf	5	;volatile
+   501                           
+   502                           ;setuppic.c: 18: TRISAbits.TRISA7=0;
+   503  0093  1385               	bcf	5,7	;volatile
+   504                           
+   505                           ;setuppic.c: 19: TRISAbits.TRISA0=0;
+   506  0094  1005               	bcf	5,0	;volatile
+   507                           
+   508                           ;setuppic.c: 20: TRISAbits.TRISA1=0;
+   509  0095  1085               	bcf	5,1	;volatile
+   510                           
+   511                           ;setuppic.c: 22: OPTION_REG=0b10001111;
+   512  0096  308F               	movlw	143
+   513  0097  0081               	movwf	1	;volatile
+   514                           
+   515                           ;setuppic.c: 23: INTCON=0b10100000;
+   516  0098  30A0               	movlw	160
+   517  0099  008B               	movwf	11	;volatile
+   518  009A  0008               	return
+   519  009B                     __end_of_system_init:	
+   520                           
+   521                           	psect	text2
+   522  009B                     __ptext2:	
+   523 ;; *************** function _getSevenSegmentNode *****************
+   524 ;; Defined at:
+   525 ;;		line 15 in file "displayUtils.c"
+   526 ;; Parameters:    Size  Location     Type
+   527 ;;  bcd             1    wreg     unsigned char 
+   528 ;; Auto vars:     Size  Location     Type
+   529 ;;  bcd             1    0[BANK0 ] unsigned char 
+   530 ;; Return value:  Size  Location     Type
+   531 ;;                  1    wreg      unsigned char 
+   532 ;; Registers used:
+   533 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   534 ;; Tracked objects:
+   535 ;;		On entry : 0/0
+   536 ;;		On exit  : 0/0
+   537 ;;		Unchanged: 0/0
+   538 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   539 ;;      Params:         0       0       0       0       0
+   540 ;;      Locals:         0       1       0       0       0
+   541 ;;      Temps:          0       0       0       0       0
+   542 ;;      Totals:         0       1       0       0       0
+   543 ;;Total ram usage:        1 bytes
+   544 ;; Hardware stack levels used:    1
+   545 ;; Hardware stack levels required when called:    1
+   546 ;; This function calls:
+   547 ;;		Nothing
+   548 ;; This function is called by:
+   549 ;;		_main
+   550 ;;		_updateDisplay
+   551 ;; This function uses a non-reentrant model
+   552 ;;
+   553                           
+   554                           
+   555                           ;psect for function _getSevenSegmentNode
+   556  009B                     _getSevenSegmentNode:	
+   557                           
+   558                           ;incstack = 0
+   559                           ; Regs used in _getSevenSegmentNode: [wreg-fsr0h+status,2+status,0]
+   560                           ;getSevenSegmentNode@bcd stored from wreg
+   561  009B  1283               	bcf	3,5	;RP0=0, select bank0
+   562  009C  1303               	bcf	3,6	;RP1=0, select bank0
+   563  009D  00B0               	movwf	getSevenSegmentNode@bcd
+   564                           
+   565                           ;displayUtils.c: 17: if(bcd > 9)
+   566  009E  300A               	movlw	10
+   567  009F  0230               	subwf	getSevenSegmentNode@bcd,w
+   568  00A0  1C03               	skipc
+   569  00A1  28A4               	goto	l730
+   570                           
+   571                           ;displayUtils.c: 18: {
+   572                           ;displayUtils.c: 19: return -1;
+   573  00A2  30FF               	movlw	255
+   574                           
+   575                           ;displayUtils.c: 20: }
+   576  00A3  0008               	return
+   577  00A4                     l730:	
+   578                           
+   579                           ;displayUtils.c: 21: else
+   580                           ;displayUtils.c: 22: {
+   581                           ;displayUtils.c: 23: return ~lookup_table[bcd];
+   582  00A4  0830               	movf	getSevenSegmentNode@bcd,w
+   583  00A5  3E20               	addlw	(low (_lookup_table| 0))& (0+255)
+   584  00A6  0084               	movwf	4
+   585  00A7  1383               	bcf	3,7	;select IRP bank0
+   586  00A8  0900               	comf	0,w
+   587  00A9  0008               	return
+   588  00AA                     __end_of_getSevenSegmentNode:	
+   589                           
+   590                           	psect	text3
+   591  0030                     __ptext3:	
+   592 ;; *************** function _bres_count_int *****************
+   593 ;; Defined at:
+   594 ;;		line 47 in file "main.c"
+   595 ;; Parameters:    Size  Location     Type
+   596 ;;		None
+   597 ;; Auto vars:     Size  Location     Type
+   598 ;;		None
+   599 ;; Return value:  Size  Location     Type
+   600 ;;                  1    wreg      void 
+   601 ;; Registers used:
+   602 ;;		wreg, status,2
+   603 ;; Tracked objects:
+   604 ;;		On entry : 0/0
+   605 ;;		On exit  : 0/0
+   606 ;;		Unchanged: 0/0
+   607 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   608 ;;      Params:         0       0       0       0       0
+   609 ;;      Locals:         0       0       0       0       0
+   610 ;;      Temps:          6       0       0       0       0
+   611 ;;      Totals:         6       0       0       0       0
+   612 ;;Total ram usage:        6 bytes
+   613 ;; Hardware stack levels used:    1
+   614 ;; This function calls:
+   615 ;;		Nothing
+   616 ;; This function is called by:
+   617 ;;		Interrupt level 1
+   618 ;; This function uses a non-reentrant model
+   619 ;;
+   620                           
+   621                           
+   622                           ;psect for function _bres_count_int
+   623  0030                     _bres_count_int:	
+   624                           
+   625                           ;main.c: 49: tuning=0;
+   626  0030  01FA               	clrf	_tuning
+   627                           
+   628                           ;main.c: 53: if(b_count>=(4004+tuning))
+   629  0031  087A               	movf	_tuning,w
+   630  0032  3EA4               	addlw	164
+   631  0033  00F0               	movwf	??_bres_count_int
+   632  0034  300F               	movlw	15
+   633  0035  1803               	skipnc
+   634  0036  3010               	movlw	16
+   635  0037  00F1               	movwf	??_bres_count_int+1
+   636  0038  0871               	movf	??_bres_count_int+1,w
+   637  0039  0277               	subwf	_b_count+1,w
+   638  003A  1D03               	skipz
+   639  003B  283E               	goto	u2_25
+   640  003C  0870               	movf	??_bres_count_int,w
+   641  003D  0276               	subwf	_b_count,w
+   642  003E                     u2_25:	
+   643  003E  1C03               	skipc
+   644  003F  2848               	goto	i1l572
+   645                           
+   646                           ;main.c: 54: {
+   647                           ;main.c: 55: if(PORTBbits.RB0==1)
+   648  0040  1C06               	btfss	6,0	;volatile
+   649  0041  2844               	goto	i1l30
+   650                           
+   651                           ;main.c: 56: {
+   652                           ;main.c: 57: PORTBbits.RB0=0;
+   653  0042  1006               	bcf	6,0	;volatile
+   654                           
+   655                           ;main.c: 58: }
+   656  0043  2845               	goto	i1l570
+   657  0044                     i1l30:	
+   658                           
+   659                           ;main.c: 59: else
+   660                           ;main.c: 60: {
+   661                           ;main.c: 61: PORTBbits.RB0=1;
+   662  0044  1406               	bsf	6,0	;volatile
+   663  0045                     i1l570:	
+   664                           
+   665                           ;main.c: 62: }
+   666                           ;main.c: 64: b_count=0;
+   667  0045  01F6               	clrf	_b_count
+   668  0046  01F7               	clrf	_b_count+1
+   669                           
+   670                           ;main.c: 65: }
+   671  0047  284E               	goto	i1l574
+   672  0048                     i1l572:	
+   673                           
+   674                           ;main.c: 66: else
+   675                           ;main.c: 67: {
+   676                           ;main.c: 68: b_count+=1;
+   677  0048  3001               	movlw	1
+   678  0049  07F6               	addwf	_b_count,f
+   679  004A  1803               	skipnc
+   680  004B  0AF7               	incf	_b_count+1,f
+   681  004C  3000               	movlw	0
+   682  004D  07F7               	addwf	_b_count+1,f
+   683  004E                     i1l574:	
+   684                           
+   685                           ;main.c: 69: }
+   686                           ;main.c: 71: if(INTCONbits.INT0IF)
+   687  004E  188B               	btfsc	11,1	;volatile
+   688                           
+   689                           ;main.c: 72: {
+   690                           ;main.c: 73: INTCONbits.TMR0IF=0;
+   691  004F  110B               	bcf	11,2	;volatile
+   692  0050  0875               	movf	??_bres_count_int+5,w
+   693  0051  00FF               	movwf	127
+   694  0052  0874               	movf	??_bres_count_int+4,w
+   695  0053  008A               	movwf	10
+   696  0054  0873               	movf	??_bres_count_int+3,w
+   697  0055  0084               	movwf	4
+   698  0056  0E72               	swapf	(??_bres_count_int+2)^(0+-128),w
+   699  0057  0083               	movwf	3
+   700  0058  0EFE               	swapf	126,f
+   701  0059  0E7E               	swapf	126,w
+   702  005A  0009               	retfie
+   703  005B                     __end_of_bres_count_int:	
+   704  007E                     btemp	set	126	;btemp
+   705  007E                     wtemp	set	126
+   706  007E                     wtemp0	set	126
+   707  0080                     wtemp1	set	128
+   708  0082                     wtemp2	set	130
+   709  0084                     wtemp3	set	132
+   710  0086                     wtemp4	set	134
+   711  0088                     wtemp5	set	136
+   712  007F                     wtemp6	set	127
+   713  007E                     ttemp	set	126
+   714  007E                     ttemp0	set	126
+   715  0081                     ttemp1	set	129
+   716  0084                     ttemp2	set	132
+   717  0087                     ttemp3	set	135
+   718  007F                     ttemp4	set	127
+   719  007E                     ltemp	set	126
+   720  007E                     ltemp0	set	126
+   721  0082                     ltemp1	set	130
+   722  0086                     ltemp2	set	134
+   723  0080                     ltemp3	set	128
+   724                           
+   725                           	psect	intentry
+   726  0004                     __pintentry:	
+   727                           ;incstack = 0
+   728                           ; Regs used in _bres_count_int: [wreg+status,2]
+   729                           
+   730  0004                     interrupt_function:	
+   731  007E                     saved_w	set	btemp
+   732  0004  00FE               	movwf	btemp
+   733  0005  0E03               	swapf	3,w
+   734  0006  00F2               	movwf	??_bres_count_int+2
+   735  0007  0804               	movf	4,w
+   736  0008  00F3               	movwf	??_bres_count_int+3
+   737  0009  080A               	movf	10,w
+   738  000A  00F4               	movwf	??_bres_count_int+4
+   739  000B  1283               	bcf	3,5	;RP0=0, select bank0
+   740  000C  1303               	bcf	3,6	;RP1=0, select bank0
+   741  000D  087F               	movf	btemp+1,w
+   742  000E  00F5               	movwf	??_bres_count_int+5
+   743  000F  118A  2830         	ljmp	_bres_count_int
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        11
+    BSS         11
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      6      12
+    BANK0            80      3      19
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _bres_count_int in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_getSevenSegmentNode
+
+Critical Paths under _bres_count_int in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _bres_count_int in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _bres_count_int in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _bres_count_int in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0     130
+                                              1 BANK0      2     2      0
+                _getSevenSegmentNode
+                        _system_init
+ ---------------------------------------------------------------------------------
+ (1) _system_init                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _getSevenSegmentNode                                  1     1      0      62
+                                              0 BANK0      1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _bres_count_int                                       6     6      0       0
+                                              0 COMMON     6     6      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _getSevenSegmentNode
+   _system_init
+
+ _bres_count_int (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0       0       9        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50      3      13       5       23.8%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      6       C       1       85.7%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      1F      12        0.0%
+ABS                  0      0      1F       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.37 build -260352376 
+Symbol Table                                                                                   Wed Mar 23 21:10:36 2016
+
+                           pc 0002                   __CFG_CP$OFF 0000                            l38 006A  
+                          fsr 0004           __end_of_system_init 009B                   __CFG_LVP$ON 0000  
+                         l730 00A4                           l738 0062                  __CFG_CPD$OFF 0000  
+                         _one 0078                           fsr0 0004                           _two 002C  
+                         indf 0000                  __CFG_IESO$ON 0000                          i1l30 0044  
+                        u2_25 003E                  __CFG_WRT$OFF 0000                 __CFG_FCMEN$ON 0000  
+                        _main 005B                          btemp 007E                 __CFG_BOREN$ON 0000  
+                        ltemp 007E                          start 0011                          ttemp 007E  
+                        wtemp 007E                         ?_main 0070                 __CFG_WDTE$OFF 0000  
+                       _ANSEL 009B                         i1l570 0045                         i1l572 0048  
+                       i1l574 004E                         _PORTB 0006                         _TRISA 0085  
+                       _TRISB 0086                __CFG_CCPMX$RB0 0000                 __CFG_PWRTE$ON 0000  
+                       _three 002A                         pclath 000A                         ltemp0 007E  
+                       ltemp1 0082                         ltemp2 0086                         ltemp3 0080  
+                       ttemp0 007E                         ttemp1 0081                         ttemp2 0084  
+                       ttemp3 0087                         ttemp4 007F                         status 0003  
+                       wtemp0 007E                         wtemp1 0080                         wtemp2 0082  
+                       wtemp3 0084                         wtemp4 0086                         wtemp5 0088  
+                       wtemp6 007F                __CFG_MCLRE$OFF 0000               __initialization 0013  
+                 _system_init 008B                  __end_of_main 007B                        ??_main 0031  
+            ??_bres_count_int 0070                        _INTCON 000B                        _OSCCON 008F  
+         _getSevenSegmentNode 009B                        _tuning 007A                  __pdataCOMMON 007B  
+                      saved_w 007E          ?_getSevenSegmentNode 0070       __end_of__initialization 002D  
+              __pcstackCOMMON 0070                  __pidataBANK0 00AA                    __pbssBANK0 002A  
+       ??_getSevenSegmentNode 0030                    __pmaintext 005B                    __pintentry 0004  
+                ?_system_init 0070                       _b_count 0076                       __ptext1 008B  
+                     __ptext2 009B                       __ptext3 0030          end_of_initialization 002D  
+              _descimal_point 007B                     _PORTAbits 0005                     _PORTBbits 0006  
+                   _TRISAbits 0085                 __pidataCOMMON 00B4           start_initialization 0013  
+     __size_of_bres_count_int 002B                    init_fetch0 007B                   __pdataBANK0 0020  
+        __size_of_system_init 0010                   __pbssCOMMON 0076                     ___latbits 0001  
+ __end_of_getSevenSegmentNode 00AA                 __pcstackBANK0 0030             interrupt_function 0004  
+      getSevenSegmentNode@bcd 0030                     main@value 0032                _bres_count_int 0030  
+                _lookup_table 0020        __end_of_bres_count_int 005B                 __size_of_main 0020  
+                  _INTCONbits 000B                      init_ram0 007F               ?_bres_count_int 0070  
+                    intlevel1 0000                 ??_system_init 0030           __CFG_FOSC$INTOSCCLK 0000  
+                  _OPTION_REG 0081                   _wheel_count 002E  __size_of_getSevenSegmentNode 000F  
